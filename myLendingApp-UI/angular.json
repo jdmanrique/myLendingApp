@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myLendingApp-UI": {
+    "main-application": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myLendingApp-UI",
+            "outputPath": "dist/main-application",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myLendingApp-UI:build"
+            "browserTarget": "main-application:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myLendingApp-UI:build:production"
+              "browserTarget": "main-application:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myLendingApp-UI:build"
+            "browserTarget": "main-application:build"
           }
         },
         "test": {
@@ -92,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           }
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myLendingApp-UI:serve"
+            "devServerTarget": "main-application:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myLendingApp-UI:serve:production"
+              "devServerTarget": "main-application:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "myLendingApp-UI"
+  "defaultProject": "main-application"
 }
