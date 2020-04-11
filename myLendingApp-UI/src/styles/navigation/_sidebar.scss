@@ -1,0 +1,29 @@
+.sidebar-nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .sidebar-nav-item {
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &.selected {
+            font-weight: bold;
+            background-color: $custom-color-wedgewood;
+            border-radius: 10px;
+            height: 35px;
+            padding-top: 5px;
+        }
+        .sidebar-nav-link {
+            color: $custom-color-lightcyan;
+            cursor: pointer;
+            &.selected {
+                color: $white;
+            }
+        }
+    }
+}
