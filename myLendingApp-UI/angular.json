@@ -93,7 +93,6 @@
             ],
             "styles": [
               "src/styles/styles.scss"
-               
             ],
             "scripts": []
           }
@@ -122,8 +121,13 @@
               "devServerTarget": "main-application:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "main-application"
 }
