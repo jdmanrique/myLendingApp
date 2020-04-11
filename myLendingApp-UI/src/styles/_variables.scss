@@ -1,0 +1,31 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+
+// Z index variables
+$zindex-sidebar: 1080 !default;
+$zindex-titlebar: 1090 !default;
+
+//Sizing
+$spacer: 1rem;
+$grid-gutter-width: $spacer * 1.5;
+$sidebar-base-width: 200px;
+$titlebar-base-height: 45px;
+
+//Colors
+$primary: #0A0637;
+$custom-color-deepblue: #022140;
+$custom-color-lightcyan: #B5CACA;
+$custom-color-wedgewood: #4F8098;
+$custom-color-glacier: #2F454F;
+
+// -- Sidenav Dark
+$nav-dark-bg: $custom-color-deepblue;
+$nav-dark-color: $custom-color-lightcyan;
+$nav-dark-heading-color: $white;
+$nav-dark-link-color: $white;
+$nav-dark-link-active-color: $white;
+$nav-dark-icon-color: $custom-color-lightcyan;
+$nav-dark-icon-active-color: $white;
+
+// -- Title Bar
+$title-dark-bg: $custom-color-lightcyan;

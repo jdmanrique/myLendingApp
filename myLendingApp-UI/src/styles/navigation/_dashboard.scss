@@ -1,0 +1,31 @@
+.nav-fixed
+{
+    #layoutMain {
+        @extend .container-fluid, .w-100, .no-gutters, .p-0;
+        color: white;
+        #layoutMain_title {
+            border-radius: 10px 10px 0px 0px;
+            min-height: $titlebar-base-height;
+            background-color: $custom-color-lightcyan;
+        }
+
+        #layoutMain_nav {
+            border-radius: 0px 0px 0px 10px;
+            width: $sidebar-base-width;
+            transition: transform 0.15s ease-in-out;
+            // Mobile first transform - by default the sidenav will be moved off-canvas
+            // transform: translateX(-$sidebar-base-width);
+            background-color: $custom-color-deepblue;
+        }
+    
+        #layoutMain_content {
+            min-height: 90vh;
+            border-radius: 0px 0px 10px 0px;
+            display: flex;
+            flex-grow:1;
+            flex-direction: column;
+            min-width: 0;
+            background-color: gray;
+        }
+    }
+}
