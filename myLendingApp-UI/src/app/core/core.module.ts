@@ -5,7 +5,6 @@ import { NavigationModule } from '@app/features/navigation/_modules/navigation.m
 @NgModule({
   declarations: [],
   imports: [
-    SharedModule,
     NavigationModule
   ]
 })

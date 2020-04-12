@@ -15,6 +15,29 @@ const routes: Routes = [
         import('@app/features/dashboard/_modules/dashboard-routing.module').then(
             m => m.DashboardRoutingModule
         ),
+  },
+  {
+    path: 'manage',
+    loadChildren: () =>
+        import('@app/features/admin/_modules/admin-routing.module').then(
+            m => m.AdminRoutingModule
+        ),
+  },
+  {
+    path: 'workspace',
+    redirectTo: '/'
+  },
+  {
+    path: 'masterfile',
+    redirectTo: '/'
+  },
+  {
+    path: 'funding',
+    redirectTo: '/'
+  },
+  {
+    path: 'reports',
+    redirectTo: '/'
   }
 ];
 

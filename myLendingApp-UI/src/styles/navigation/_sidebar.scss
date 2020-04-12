@@ -9,21 +9,68 @@
     .sidebar-nav-item {
         
         margin-top: 10px;
-        margin-bottom: 10px;
 
-        &.selected {
-            font-weight: bold;
-            background-color: $custom-color-wedgewood;
-            border-radius: 10px;
-            height: 35px;
-            padding-top: 5px;
-        }
         .sidebar-nav-link {
+            vertical-align: middle;
             color: $custom-color-lightcyan;
             cursor: pointer;
             &.selected {
                 color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+    .sidebar-nav-icon {
+        background-size: 100%;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+
+        &.dashboard {
+            background-image: url('../assets/icons/nav/dashboard.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/dashboard-selected.png');
+            }
+        }
+        &.manage {
+            background-image: url('../assets/icons/nav/manage.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/manage-selected.png');
+            }
+        }
+        &.workspace {
+            background-image: url('../assets/icons/nav/workspace.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/workspace-selected.png');
+            }
+        }
+        &.masterfile {
+            background-image: url('../assets/icons/nav/masterfile.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/masterfile-selected.png');
+            }
+        }
+        &.funding {
+            background-image: url('../assets/icons/nav/funding.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/funding-selected.png');
+            }
+        }
+        &.reports {
+            background-image: url('../assets/icons/nav/reports.png');
+
+            &.selected {
+                background-image: url('../assets/icons/nav/reports-selected.png');
             }
         }
     }
 }
+
+
