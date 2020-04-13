@@ -1,26 +1,14 @@
 <nav class="sidebar-nav accordion" id="sideBarNavMain">
-    <div class="sidebar-nav-item selected">
-        <span class="sidebar-nav-icon dashboard selected"></span>
-        <a class="sidebar-nav-link selected" href="/dashboard">Dashboard</a>
-    </div>
-    <div class="sidebar-nav-item">
-        <span class="sidebar-nav-icon manage"></span>
-        <a class="sidebar-nav-link" href="/">Manage</a>
-    </div>
-    <div class="sidebar-nav-item">
-        <span class="sidebar-nav-icon workspace"></span>
-        <a class="sidebar-nav-link" href="/">Workspace</a>
-    </div>
-    <div class="sidebar-nav-item">
-        <span class="sidebar-nav-icon masterfile"></span>
-        <a class="sidebar-nav-link" href="/">Masterfile</a>
-    </div>
-    <div class="sidebar-nav-item">
-        <span class="sidebar-nav-icon funding"></span>
-        <a class="sidebar-nav-link" href="/">Funding</a>
-    </div>
-    <div class="sidebar-nav-item">
-        <span class="sidebar-nav-icon reports"></span>
-        <a class="sidebar-nav-link" href="/">Reports</a>
+    <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}">
+        <span [ngClass]="item.icon" class="sidebar-nav-icon"></span>
+        <span class="sidebar-nav-link" (click)="isCollapsed = !isCollapsed; redirectTo(item)" data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
+            {{item.text}}
+        </span>
+        <div id="child_{{item.id}}" class="collapse side-bar-nav-children" [ngbCollapse]="isCollapsed">
+            <div *ngFor="let child of item.submenu">
+                <span [ngClass]="child.icon" class="sidebar-nav-icon"></span>
+                <span  class="sidebar-nav-link" (click)="redirectTo(child.link)">{{child.text}}</span>
+            </div>
+        </div>
     </div>
 </nav>

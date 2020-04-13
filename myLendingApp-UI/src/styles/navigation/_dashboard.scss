@@ -11,7 +11,7 @@
 
         #layoutMain_nav {
             border-radius: 0px 0px 0px 10px;
-            width: $sidebar-base-width;
+            min-width: $sidebar-base-width;
             transition: transform 0.15s ease-in-out;
             // Mobile first transform - by default the sidenav will be moved off-canvas
             // transform: translateX(-$sidebar-base-width);

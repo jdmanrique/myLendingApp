@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from '../components/dashboard.component';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { DashboardComponent } from '../components/dashboard.component';
   imports: [
     CommonModule,
     BrowserModule,
-    DashboardRoutingModule,
     NavigationModule
   ],
   exports:  [DashboardComponent]

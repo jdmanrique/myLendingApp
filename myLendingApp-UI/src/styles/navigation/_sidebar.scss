@@ -18,8 +18,12 @@
                 color: $white;
                 font-weight: bold;
             }
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
+
     .sidebar-nav-icon {
         background-size: 100%;
         display: inline-block;
@@ -74,3 +78,8 @@
 }
 
 
+.side-bar-nav-children {
+    &.show, &.collapse {
+        transition: 100s ease;
+    }
+}

@@ -1,3 +1,4 @@
+import { NavigationService } from '@app/features/navigation/service/navigation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { 
+
+  }
 
   ngOnInit(): void {
   }
