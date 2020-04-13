@@ -4,6 +4,7 @@ export interface INavItem {
     text: string;
     link?: string;
     submenu?: INavItem[];
+    isCollapsed?: boolean;
 }
 
 export interface INavItems {

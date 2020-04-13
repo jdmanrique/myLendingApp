@@ -1,5 +1,17 @@
+
+%icon-image {
+  width: 100%;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 .sidebar-nav {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -22,14 +34,29 @@
                 text-decoration: underline;
             }
         }
+
+        .sidebar-nav-caret {
+          @extend %icon-image;
+          background-image: url('../assets/icons/nav/caret.png');
+          float: right;
+          margin-top: 6px;
+          &.selected {
+            background-image: url('../assets/icons/nav/caret-selected.png');
+          }
+        }
+
+        .sidebar-nav-item-container {
+          height: 30px;
+          padding-left: 5px;
+          &.selected {
+            background-color: $custom-color-wedgewood;
+          }
+        }
+        
     }
 
     .sidebar-nav-icon {
-        background-size: 100%;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
+        @extend %icon-image;
         margin-right: 10px;
 
         &.dashboard {
@@ -81,5 +108,8 @@
 .side-bar-nav-children {
     &.show, &.collapse {
         transition: 100s ease;
+    }
+    .side-bar-nav-children-item {
+      margin-top: 10px;
     }
 }
