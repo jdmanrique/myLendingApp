@@ -1,6 +1,6 @@
 <nav class="sidebar-nav accordion" id="sideBarNavMain">
     <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}">
-      <div class="sidebar-nav-item-container" [ngClass]="!item.isCollapsed ? 'selected': ''">
+      <div appNavHighlight class="sidebar-nav-item-container" [ngClass]="!item.isCollapsed ? 'selected': ''">
         <span *ngIf="item.icon" [ngClass]="item.icon" class="sidebar-nav-icon"></span>
         <span [ngClass]="!item.isCollapsed ? 'selected': ''" class="sidebar-nav-link" (click)="item.isCollapsed = !item.isCollapsed; redirectTo(item)" data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
             {{item.text}}
