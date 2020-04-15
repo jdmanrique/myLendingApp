@@ -1,3 +1,4 @@
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,7 +10,10 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule
+    NgbCollapseModule
+  ],
+  exports: [
+    CommonModule, BrowserModule, NgbCollapseModule
   ]
 })
 export class SharedModule { }

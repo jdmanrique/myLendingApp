@@ -1,4 +1,4 @@
-import { INavItems, INavItem } from './../models/navigation.model';
+import { INavItem } from './../models/navigation.model';
 
 export const sideNavItems: INavItem[] = [
     {

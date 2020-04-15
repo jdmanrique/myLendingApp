@@ -1,3 +1,4 @@
+import { INavItem } from './../models/navigation.model';
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -7,14 +8,20 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class NavigationService {
-
-  constructor(private route: ActivatedRoute, private router: Router) { 
-    
-
-  }
+export class LayoutService {
 
   get navigationItems() {
     return sideNavItems;
   }
+
+  constructor(private route: ActivatedRoute, private router: Router) { 
+  }
+
+  redirectTo(item: INavItem) {
+    if (item.link)
+    {
+      this.router.navigateByUrl(item.link);
+    }
+  }  
 }
+

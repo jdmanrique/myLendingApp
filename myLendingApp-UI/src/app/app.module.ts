@@ -1,15 +1,20 @@
-import { DashboardModule } from './features/dashboard/_modules/dashboard.module';
-import { NavigationModule } from '@app/features/navigation/_modules/navigation.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavHighlighterDirective } from './shared/directives/nav-highlighter.directive';
+import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
+import { TitlebarComponent } from './layout/components/titlebar/titlebar.component';
+import { FooterComponent } from './layout/components/footer/footer.component';
+import { ContentLayoutComponent } from './layout/components/content-layout/content-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContentLayoutComponent,
+    SidebarComponent,
+    TitlebarComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,

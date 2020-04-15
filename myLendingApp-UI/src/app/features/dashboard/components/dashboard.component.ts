@@ -1,16 +1,19 @@
-import { NavigationService } from '@app/features/navigation/service/navigation.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { timer } from 'rxjs/internal/observable/timer';
+import { DashboardService } from '../service/dashboard.service';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Default,
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  providers: [DashboardService] 
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private navigationService: NavigationService) { 
-
+  constructor(public dashboardService: DashboardService) { 
+    
   }
+
 
   ngOnInit(): void {
   }

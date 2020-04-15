@@ -1,8 +1,10 @@
+import { LayoutService } from './../../service/layout.service';
+
 import { INavItems, INavItem } from './../../models/navigation.model';
-import { NavigationService } from '@app/features/navigation/service/navigation.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
@@ -12,8 +14,8 @@ export class SidebarComponent implements OnInit {
   navItems: INavItem[];
   isCollapsed = true;
 
-  constructor(private navigationService: NavigationService) { 
-    this.navItems = navigationService.navigationItems;
+  constructor(private layoutService: LayoutService) { 
+    this.navItems = layoutService.navigationItems;
   }
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class SidebarComponent implements OnInit {
   }
 
   redirectTo(item: INavItem) {
+    this.layoutService.redirectTo(item);
   }
 
   // Private methods
