@@ -1,6 +1,16 @@
 @import "bootstrap/scss/_functions";
 @import "bootstrap/scss/_variables";
 
+%icon-image {
+    width: 100%;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 // Z index variables
 $zindex-sidebar: 1080 !default;
 $zindex-titlebar: 1090 !default;
@@ -9,7 +19,7 @@ $zindex-titlebar: 1090 !default;
 $spacer: 1rem;
 $grid-gutter-width: $spacer * 1.5;
 $sidebar-base-width: 200px;
-$titlebar-base-height: 45px;
+$titlebar-base-height: 40px;
 
 //Colors
 $primary: #0A0637;

@@ -1,0 +1,21 @@
+
+.titlebar-container {
+    display: flex;
+    flex-direction: row;
+
+    .titlebar-menu-container {
+        display: flex;
+        height: $titlebar-base-height;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        .titlebar-menu-icon {
+            @extend %icon-image;
+            width:30px;
+            height:30px;
+            background-image: url('../assets/icons/nav/hamburger menu.png');
+            background-repeat: no-repeat;
+        }
+    }
+    
+}

@@ -2,7 +2,7 @@
     <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}" [ngClass]="!item.isCollapsed && item.submenu ? 'selected': ''">
         <div  class="sidebar-nav-item-container">
             <span *ngIf="item.icon" [ngClass]="item.icon" class="sidebar-nav-icon"></span>
-            <a class="sidebar-nav-link" (click)="item.submenu ? item.isCollapsed = !item.isCollapsed : ''" routerLink="{{item.link}}"  data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
+            <a class="sidebar-nav-link" (click)="item.submenu ? item.isCollapsed = !item.isCollapsed : ''" [routerLink]="item.link"  data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
                 {{item.text}}
             </a>
             <div *ngIf="item.submenu" class="sidebar-nav-caret" (click)="item.isCollapsed = !item.isCollapsed;"></div>

@@ -30,7 +30,6 @@ export const sideNavItems: INavItem[] = [
       id: 'navWorkspace',
       icon: 'workspace',
       text: 'Workspace',
-      link: '/workspace',
       submenu: [
           {
               id: 'navCollections',
@@ -49,21 +48,18 @@ export const sideNavItems: INavItem[] = [
       id: 'navMasterfile',
       icon: 'masterfile',
       text: 'Masterfile',
-      link: '/masterfile',
       isCollapsed: true
     },
     {
       id: 'navFunding',
       icon: 'funding',
       text: 'Funding',
-      link: '/funding',
       isCollapsed: true
     },
     {
       id: 'navReports',
       icon: 'reports',
       text: 'Reports',
-      link: '/reports',
       isCollapsed: true
     }     
 ];
