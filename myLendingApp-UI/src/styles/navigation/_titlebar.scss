@@ -1,21 +1,64 @@
 
+%titlebar-container {
+  height: $titlebar-base-height;
+  align-items: center;
+  display: flex;
+  
+}
+
 .titlebar-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 50px;
 
     .titlebar-menu-container {
-        display: flex;
-        height: $titlebar-base-height;
-        width: 60px;
         justify-content: center;
-        align-items: center;
+        padding-left: 5px;
+        flex-basis: 50px;
+        @extend %titlebar-container;
+
         .titlebar-menu-icon {
             @extend %icon-image;
-            width:30px;
-            height:30px;
             background-image: url('../assets/icons/nav/hamburger menu.png');
-            background-repeat: no-repeat;
+            &:active {
+              background-image: url('../assets/icons/nav/menu active.png');
+            }
         }
+    }
+
+    .titlebar-logo-container {
+        @extend %titlebar-container;
+        justify-content: left;
+        flex-grow: 2;
+
+        .titlebar-logo-icon {
+          @extend %icon-image;
+          width:150px;
+          height:30px;
+        }
+    }
+
+    .titlebar-action-container {
+        float:right;
+        flex-grow: .6;
+
+        @extend %titlebar-container;
+
+        .user-name {
+          color: $primary;
+        }
+
+        .user-logo {
+          border-radius: 20px;
+          background-color: $white;
+          width: 30px;
+          height: 30px;
+          &:after {
+            content: '\9660';
+
+          }
+        } 
     }
     
 }

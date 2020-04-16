@@ -9,6 +9,7 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
+    background-repeat: no-repeat;
 }
 
 // Z index variables
@@ -28,6 +29,7 @@ $custom-color-lightcyan: #B5CACA;
 $custom-color-wedgewood: #4F8098;
 $custom-color-glacier: #2F454F;
 $custom-color-bluemagenta: #14142f;
+$custom-color-portgore: #26224E;
 
 // -- Sidenav Dark
 $nav-dark-bg: $custom-color-deepblue;
