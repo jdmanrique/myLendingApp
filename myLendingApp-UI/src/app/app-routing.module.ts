@@ -14,7 +14,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'manage',
+    path: 'admin',
     loadChildren: () =>
         import('@app/features/admin/_modules/admin-routing.module').then(
             m => m.AdminRoutingModule

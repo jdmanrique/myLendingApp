@@ -41,12 +41,12 @@
 
     .titlebar-action-container {
         float:right;
-        flex-grow: .6;
 
         @extend %titlebar-container;
 
         .user-name {
-          color: $primary;
+          color: $black;
+          margin: 0px 5px 0px 5px;
         }
 
         .user-logo {
@@ -54,10 +54,6 @@
           background-color: $white;
           width: 30px;
           height: 30px;
-          &:after {
-            content: '\9660';
-
-          }
         } 
     }
     

@@ -9,19 +9,19 @@ export const sideNavItems: INavItem[] = [
         isCollapsed: true
     },
     {
-        id: 'navManage',
-        icon: 'manage',
-        text: 'Manage',
+        id: 'navAdmin',
+        icon: 'admin',
+        text: 'Admin',
         submenu: [
             {
-                id: 'navManageUsers',
+                id: 'navAdminUsers',
                 text: 'Users',
-                link: '/manage/users'
+                link: '/admin/users'
             },
             {
-                id: 'navManageBanks',
+                id: 'navAdminBanks',
                 text: 'Banks',
-                link: '/manage/banks'
+                link: '/admin/banks'
             },
         ],
         isCollapsed: true 

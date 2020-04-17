@@ -6,7 +6,7 @@ import { UsersComponent } from '../components/users/users.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/manage/users'
+    component: UsersComponent
   },
   {
     path: 'users',
