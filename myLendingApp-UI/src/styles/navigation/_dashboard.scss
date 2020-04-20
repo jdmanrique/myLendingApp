@@ -2,7 +2,7 @@
 {
     #layoutMain {
         @extend .container-fluid, .w-100, .no-gutters, .p-0;
-        color: white;
+        color: $primary;
         #layoutMain_title {
             border-radius: 10px 10px 0px 0px;
             min-height: $titlebar-base-height;

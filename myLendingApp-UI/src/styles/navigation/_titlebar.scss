@@ -41,20 +41,38 @@
 
     .titlebar-action-container {
         float:right;
-
+        flex-direction: row;
         @extend %titlebar-container;
+        padding-left: 10px;
+        padding-right: 10px;
 
+        .user-notif {
+          .user-notif-icon {
+            @extend %icon-image;
+            width: 25px;
+            height: 25px;
+            background-image: url("../assets/icons/nav/notifications.png");
+            &.active {
+              background-image: url("../assets/icons/nav/notifications-active.png");
+            }
+          }
+        }
         .user-name {
-          color: $black;
-          margin: 0px 5px 0px 5px;
+          margin: 0px 10px 0px 10px;
         }
 
         .user-logo {
-          border-radius: 20px;
-          background-color: $white;
+          @extend %icon-image;
           width: 30px;
           height: 30px;
+          background-image: url("../assets/icons/nav/face.png");
         } 
+        .caret {
+          @extend %icon-image;
+          background-image: url("../assets/icons/nav/user-caret.png");
+          width: 15px;
+          height: 15px;
+        }
     }
     
 }

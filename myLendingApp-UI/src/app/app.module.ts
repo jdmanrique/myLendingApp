@@ -7,6 +7,7 @@ import { SidebarComponent } from './layout/components/sidebar/sidebar.component'
 import { TitlebarComponent } from './layout/components/titlebar/titlebar.component';
 import { FooterComponent } from './layout/components/footer/footer.component';
 import { ContentLayoutComponent } from './layout/components/content-layout/content-layout.component';
+import { SearchComponent } from './layout/components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ContentLayoutComponent } from './layout/components/content-layout/conte
     ContentLayoutComponent,
     SidebarComponent,
     TitlebarComponent,
-    FooterComponent
+    FooterComponent,
+    SearchComponent
   ],
   imports: [
     AppRoutingModule,
