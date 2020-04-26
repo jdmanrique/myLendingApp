@@ -1,22 +1,29 @@
-<div class="sidebar-nav-container">
-    <nav class="sidebar-nav accordion" *ngIf="sideBarToggled">
-        <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}" [ngClass]="!item.isCollapsed && item.submenu ? 'selected': ''">
-            <div  class="sidebar-nav-item-container">
-                <span *ngIf="item.icon" [ngClass]="item.icon" class="sidebar-nav-icon"></span>
-                <a class="sidebar-nav-link" (click)="item.submenu ? item.isCollapsed = !item.isCollapsed : ''" [routerLink]="item.link"  data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
-                    {{item.text}}
-                </a>
-                <div *ngIf="item.submenu" class="sidebar-nav-caret" (click)="item.isCollapsed = !item.isCollapsed;"></div>
-            </div>
-            <div id="child_{{item.id}}" class="collapse sidebar-nav-children" [ngbCollapse]="item.isCollapsed">
-                <div class="sidebar-nav-children-item" *ngFor="let child of item.submenu">
-                    <span [ngClass]="child.icon" class="sidebar-nav-icon"></span>
-                    <a  class="sidebar-nav-link" routerLink="{{child.link}}">{{child.text}}</a>
+<div class="sidebar-nav-main">
+    <div class="sidebar-menu-container" #sideBarMenuContainer name="sideBarMenuContainer">
+        <span class="sidebar-menu-close-icon" (click)="toggleSideBar(false)" *ngIf="sideBarToggled"></span>
+        <span class="sidebar-menu-icon" (click)="toggleSideBar(true)" *ngIf="!sideBarToggled"></span>
+    </div>
+    <div class="sidebar-nav-container" #sideBarNavContainer name="sidebarNavContainer">
+        <nav class="sidebar-nav accordion">
+            <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}" [ngClass]="!item.isCollapsed && item.submenu ? 'selected': ''">
+                <div  class="sidebar-nav-item-container">
+                    <span *ngIf="item.icon" [ngClass]="item.icon" class="sidebar-nav-icon"></span>
+                    <a class="sidebar-nav-link" (click)="item.submenu ? item.isCollapsed = !item.isCollapsed : ''" [routerLink]="item.link"  data-toggle="collapse" [attr.data-target]="'#child_' + item.id">
+                        {{item.text}}
+                    </a>
+                    <div *ngIf="item.submenu" class="sidebar-nav-caret" (click)="item.isCollapsed = !item.isCollapsed;"></div>
+                </div>
+                <div id="child_{{item.id}}" class="collapse sidebar-nav-children" [ngbCollapse]="item.isCollapsed">
+                    <div class="sidebar-nav-children-item" *ngFor="let child of item.submenu">
+                        <span [ngClass]="child.icon" class="sidebar-nav-icon"></span>
+                        <a  class="sidebar-nav-link" routerLink="{{child.link}}">{{child.text}}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </div>
+
 
 
 
