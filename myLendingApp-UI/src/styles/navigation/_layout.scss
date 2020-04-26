@@ -1,0 +1,17 @@
+#layoutMain {
+    @extend .container-fluid, .w-100, .no-gutters, .p-0, .h-100;
+    display: flex;
+    flex-direction: row;
+
+    .main-container {
+        @extend .w-100, .h-100;        
+        display: flex;
+        flex-direction: column;
+    
+        #layoutMain_content {
+            flex-grow: 2;
+            background-color: $custom-color-portgore;
+        }
+    }
+    
+}

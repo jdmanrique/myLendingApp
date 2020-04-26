@@ -10,6 +10,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LayoutService {
 
+  sideBarToggled: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
   get navigationItems() {
     return sideNavItems;
   }
@@ -23,5 +25,9 @@ export class LayoutService {
       this.router.navigateByUrl(item.link);
     }
   }  
+
+  toggleSideBar(toggle: boolean) {
+    this.sideBarToggled.next(toggle);
+  }
 }
 

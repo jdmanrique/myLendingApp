@@ -1,15 +1,9 @@
-<span class="nav-fixed">
-    <div id="layoutMain">
-        <div id="layoutMain_title">
-            <app-titlebar></app-titlebar>
-        </div>
-        <div class="row m-0">
-            <div id="layoutMain_nav">
-                <app-sidebar></app-sidebar>
-            </div>
-            <div id="layoutMain_content">
-                <router-outlet></router-outlet>
-            </div>
+<div id="layoutMain">
+    <app-sidebar></app-sidebar>
+    <div class="main-container">
+        <app-titlebar></app-titlebar>
+        <div id="layoutMain_content">
+            <router-outlet></router-outlet>
         </div>
     </div>
-</span>
+</div>

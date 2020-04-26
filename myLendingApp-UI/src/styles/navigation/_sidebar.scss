@@ -1,128 +1,140 @@
-.sidebar-nav {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding-left: 10px;
-    padding-right: 10px;
+.sidebar-nav-container {
+    z-index: 1;
+    -ms-box-shadow: 5px 5px 5px #13121259;
+    -webkit-box-shadow: 5px 5px 5px #13121259;
+    -moz-box-shadow: 5px 5px 5px #13121259;
+    box-shadow: 5px 5px 5px #13121259;
+    position: absolute;
 
-    .sidebar-nav-item {
-        
-        margin-top: 10px;
+    .sidebar-nav {
+        min-width: $sidebar-base-width;
+        transition: transform 0.15s ease-in-out;
+        background-color: $custom-color-deepblue;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 2.5rem .6rem 0 .6rem;
 
-        .sidebar-nav-link {
-            vertical-align: middle;
-            color: $custom-color-lightcyan;
-            cursor: pointer;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        .sidebar-nav-item {
+            
+            margin-top: 10px;
 
-        .sidebar-nav-caret {
-          @extend %icon-image;
-          background-image: url('../assets/icons/nav/caret.png');
-          float: right;
-          margin-top: 6px;
-          margin-right: 5px;
-        }
-
-        .sidebar-nav-item-container {
-          height: 30px;
-          padding-left: 5px;
-          padding-bottom: 5px;
-        }
-        .sidebar-nav-icon {
-            @extend %icon-image;
-            margin-right: 10px;
-    
-            &.dashboard {
-                background-image: url('../assets/icons/nav/dashboard.png');
-            }
-            &.admin {
-                background-image: url('../assets/icons/nav/admin.png');
-            }
-            &.workspace {
-                background-image: url('../assets/icons/nav/workspace.png');
-            }
-            &.masterfile {
-                background-image: url('../assets/icons/nav/masterfile.png');
-            }
-            &.funding {
-                background-image: url('../assets/icons/nav/funding.png');
-            }
-            &.reports {
-                background-image: url('../assets/icons/nav/reports.png');
-            }
-        }
-        
-        &.selected {
-            .sidebar-nav-caret {
-                background-image: url('../assets/icons/nav/caret-selected.png');
-            }
-            .sidebar-nav-item-container {
-                background-color: $custom-color-wedgewood;
-                border-radius: 10px 10px 0px 0px;
-
-                .sidebar-nav-link {
-                    color: $white;
-                    font-weight: bold;
+            .sidebar-nav-link {
+                vertical-align: middle;
+                color: $custom-color-lightcyan;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
 
+            .sidebar-nav-caret {
+            @extend %icon-image;
+            background-image: url('../assets/icons/nav/caret.png');
+            float: right;
+            margin-top: 6px;
+            margin-right: 5px;
+            }
+
+            .sidebar-nav-item-container {
+            height: 30px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            }
             .sidebar-nav-icon {
+                @extend %icon-image;
+                margin-right: 10px;
+        
                 &.dashboard {
-                    background-image: url('../assets/icons/nav/dashboard-selected.png');
+                    background-image: url('../assets/icons/nav/dashboard.png');
                 }
                 &.admin {
-                    background-image: url('../assets/icons/nav/admin-selected.png');
+                    background-image: url('../assets/icons/nav/admin.png');
                 }
                 &.workspace {
-                    background-image: url('../assets/icons/nav/workspace-selected.png');
+                    background-image: url('../assets/icons/nav/workspace.png');
                 }
                 &.masterfile {
-                    background-image: url('../assets/icons/nav/masterfile-selected.png');
+                    background-image: url('../assets/icons/nav/masterfile.png');
                 }
                 &.funding {
-                    background-image: url('../assets/icons/nav/funding-selected.png');
+                    background-image: url('../assets/icons/nav/funding.png');
                 }
                 &.reports {
-                    background-image: url('../assets/icons/nav/reports-selected.png');
+                    background-image: url('../assets/icons/nav/reports.png');
+                }
+            }
+            
+            &.selected {
+                .sidebar-nav-caret {
+                    background-image: url('../assets/icons/nav/caret-selected.png');
+                }
+                .sidebar-nav-item-container {
+                    background-color: $custom-color-wedgewood;
+                    border-radius: 10px 10px 0px 0px;
+
+                    .sidebar-nav-link {
+                        color: $white;
+                        font-weight: bold;
+                    }
+                }
+
+                .sidebar-nav-icon {
+                    &.dashboard {
+                        background-image: url('../assets/icons/nav/dashboard-selected.png');
+                    }
+                    &.admin {
+                        background-image: url('../assets/icons/nav/admin-selected.png');
+                    }
+                    &.workspace {
+                        background-image: url('../assets/icons/nav/workspace-selected.png');
+                    }
+                    &.masterfile {
+                        background-image: url('../assets/icons/nav/masterfile-selected.png');
+                    }
+                    &.funding {
+                        background-image: url('../assets/icons/nav/funding-selected.png');
+                    }
+                    &.reports {
+                        background-image: url('../assets/icons/nav/reports-selected.png');
+                    }
                 }
             }
         }
     }
-}
 
 
-%collapse-transition {
-    display: block !important;
-    transition: all .25s ease-in-out;
+    %collapse-transition {
+        display: block !important;
+        transition: all .25s ease-in-out;
+    }
+    .sidebar-nav-children {
+        &.collapse, &.collapse.in {
+            @extend %collapse-transition;
+        }
+        &.collapse {
+            opacity: 0;
+            height: 0;
+        }
+        &.show {
+            padding-left: 20px;
+            padding-bottom: 5px;
+            background-color: $custom-color-bluemagenta;
+            opacity: 1;
+            height: 100%;
+        }
+        .sidebar-nav-children-item {
+            opacity: 1;
+            height: 100%;   
+        .sidebar-nav-link:before {
+            content: "-";
+            margin-right: 5px;
+        }
+        }
+    }
 }
-.sidebar-nav-children {
-    &.collapse, &.collapse.in {
-        @extend %collapse-transition;
-    }
-    &.collapse {
-        opacity: 0;
-        height: 0;
-    }
-    &.show {
-        padding-left: 20px;
-        padding-bottom: 5px;
-        background-color: $custom-color-bluemagenta;
-        opacity: 1;
-        height: 100%;
-    }
-    .sidebar-nav-children-item {
-        opacity: 1;
-        height: 100%;   
-      .sidebar-nav-link:before {
-        content: "-";
-        margin-right: 5px;
-      }
-    }
-}
+
 
 // .collapse, .collapse.in {
 //     display: block !important;

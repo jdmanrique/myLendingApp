@@ -1,5 +1,7 @@
 
 %titlebar-container {
+  z-index: 2;
+  position: relative;
   height: $titlebar-base-height;
   align-items: center;
   display: flex;
@@ -12,26 +14,35 @@
     justify-content: space-between;
     flex-basis: 50px;
 
-    .titlebar-menu-container {
+      .titlebar-menu-container {
+        background-color: $custom-color-lightcyan;  
         justify-content: center;
-        padding-left: 5px;
-        flex-basis: 50px;
+        width: 2.5rem;
         @extend %titlebar-container;
 
         .titlebar-menu-icon {
             @extend %icon-image;
-            background-image: url('../assets/icons/nav/hamburger menu.png');
-            &:active {
-              background-image: url('../assets/icons/nav/menu active.png');
-            }
+            background-image: url('../assets/icons/nav/menu-open.png');
         }
-    }
+
+        .titlebar-menu-close-icon {
+            @extend %icon-image;
+            background-image: url('../assets/icons/nav/menu-close.png');
+        }
+        
+        &.toggled {
+          margin-left: 10rem;
+          background-color: #022140;
+          padding-right: .5rem;
+        }
+      }
 
     .titlebar-logo-container {
+        background-color: $custom-color-lightcyan;  
         @extend %titlebar-container;
         justify-content: left;
         flex-grow: 2;
-
+        padding-left: .5rem;
         .titlebar-logo-icon {
           @extend %icon-image;
           width:150px;
@@ -40,6 +51,7 @@
     }
 
     .titlebar-action-container {
+        background-color: $custom-color-lightcyan;  
         float:right;
         flex-direction: row;
         @extend %titlebar-container;
@@ -80,5 +92,7 @@
           width: 250px;
         }
     }
+
+    
     
 }
