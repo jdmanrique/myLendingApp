@@ -1,5 +1,5 @@
 app-sidebar {
-    background-color: $custom-color-deepblue;
+    background-color: $custom-color-prussianblue;
 }
 .sidebar-nav-main {
     
@@ -31,7 +31,6 @@ app-sidebar {
     }
     
     .sidebar-nav-container {
-        width: $sidebar-base-width;
         margin-left: -$sidebar-base-width;
         transform: translateX(-$sidebar-base-width);
         transition: all .15s ease-in-out;
@@ -46,11 +45,10 @@ app-sidebar {
             flex-direction: column;
     
             .sidebar-nav-item {
-                margin-top: 10px;
     
                 .sidebar-nav-link {
                     vertical-align: middle;
-                    color: $custom-color-lightcyan;
+                    color: $white;
                     cursor: pointer;
                     &:hover {
                         text-decoration: underline;
@@ -99,15 +97,6 @@ app-sidebar {
                     .sidebar-nav-caret {
                         background-image: url('../assets/icons/nav/caret-selected.png');
                     }
-                    .sidebar-nav-item-container {
-                        background-color: $custom-color-wedgewood;
-                        border-radius: 10px 10px 0px 0px;
-    
-                        .sidebar-nav-link {
-                            color: $white;
-                            font-weight: bold;
-                        }
-                    }
     
                     .sidebar-nav-icon {
                         &.dashboard {
@@ -149,7 +138,7 @@ app-sidebar {
             &.show {
                 padding-left: 20px;
                 padding-bottom: 5px;
-                background-color: $custom-color-bluemagenta;
+                background-color: $custom-color-royalbluedark;
                 opacity: 1;
                 height: 100%;
             }

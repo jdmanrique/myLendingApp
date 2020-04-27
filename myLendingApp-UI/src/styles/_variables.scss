@@ -23,22 +23,8 @@ $sidebar-base-width: 12rem;
 $titlebar-base-height: 2.5rem;
 
 //Colors
-$primary: #0A0637;
-$custom-color-deepblue: #022140;
+$custom-color-oxfordblue: #00093E;
+$custom-color-royalbluedark: #011D52;
+$custom-color-prussianblue: #002D5F;
+$custom-color-sapphireblue: #006C9A;
 $custom-color-lightcyan: #B5CACA;
-$custom-color-wedgewood: #4F8098;
-$custom-color-glacier: #2F454F;
-$custom-color-bluemagenta: #14142f;
-$custom-color-portgore: #26224E;
-
-// -- Sidenav Dark
-$nav-dark-bg: $custom-color-deepblue;
-$nav-dark-color: $custom-color-lightcyan;
-$nav-dark-heading-color: $white;
-$nav-dark-link-color: $white;
-$nav-dark-link-active-color: $white;
-$nav-dark-icon-color: $custom-color-lightcyan;
-$nav-dark-icon-active-color: $white;
-
-// -- Title Bar
-$title-dark-bg: $custom-color-lightcyan;
