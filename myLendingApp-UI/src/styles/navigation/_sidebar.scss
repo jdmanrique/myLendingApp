@@ -2,7 +2,7 @@ app-sidebar {
     background-color: $custom-color-prussianblue;
 }
 .sidebar-nav-main {
-    
+
     .sidebar-menu-container {
         justify-content: center;
         width: 2.5rem;
@@ -11,22 +11,15 @@ app-sidebar {
         display: flex;
         margin-right: .2rem;
         transition: all .15s ease-in-out;
-    
-        .sidebar-menu-icon {
-            @extend %icon-image;
-            background-image: url('../assets/icons/nav/menu-open.png');
-        }
-    
-        .sidebar-menu-close-icon {
-            transition: all 1s ease-in-out;
-            transform: rotate(90);
-            @extend %icon-image;
-            background-image: url('../assets/icons/nav/menu-close.png');
-        }
         
         &.toggled {
           margin-left: 10rem;
           transform: translateX(0);
+        }
+
+        .sidebar-menu-icon {
+          color: $custom-color-shadowblue;
+          cursor: pointer;
         }
     }
     
@@ -39,6 +32,11 @@ app-sidebar {
             margin-left: 0;
             transform: translateX(0);
         }
+        .sidebar-nav-icon {
+          color: $custom-color-shadowblue;          
+          cursor: pointer;
+        }
+
         .sidebar-nav {
             height: calc(100vh - 2.5rem);
             display: flex;
@@ -48,76 +46,15 @@ app-sidebar {
     
                 .sidebar-nav-link {
                     vertical-align: middle;
-                    color: $white;
+                    color: $custom-color-shadowblue;          
                     cursor: pointer;
                     &:hover {
                         text-decoration: underline;
                     }
                 }
     
-                .sidebar-nav-caret {
-                    @extend %icon-image;
-                    background-image: url('../assets/icons/nav/caret.png');
-                    float: right;
-                    margin-top: 6px;
-                    margin-right: 5px;
-                }
-    
                 .sidebar-nav-item-container {
-                    height: 30px;
-                    padding-left: 5px;
-                    padding-bottom: 5px;
-                }
-
-                .sidebar-nav-icon {
-                    @extend %icon-image;
-                    margin-right: 10px;
-            
-                    &.dashboard {
-                        background-image: url('../assets/icons/nav/dashboard.png');
-                    }
-                    &.admin {
-                        background-image: url('../assets/icons/nav/admin.png');
-                    }
-                    &.workspace {
-                        background-image: url('../assets/icons/nav/workspace.png');
-                    }
-                    &.masterfile {
-                        background-image: url('../assets/icons/nav/masterfile.png');
-                    }
-                    &.funding {
-                        background-image: url('../assets/icons/nav/funding.png');
-                    }
-                    &.reports {
-                        background-image: url('../assets/icons/nav/reports.png');
-                    }
-                }
-                
-                &.selected {
-                    .sidebar-nav-caret {
-                        background-image: url('../assets/icons/nav/caret-selected.png');
-                    }
-    
-                    .sidebar-nav-icon {
-                        &.dashboard {
-                            background-image: url('../assets/icons/nav/dashboard-selected.png');
-                        }
-                        &.admin {
-                            background-image: url('../assets/icons/nav/admin-selected.png');
-                        }
-                        &.workspace {
-                            background-image: url('../assets/icons/nav/workspace-selected.png');
-                        }
-                        &.masterfile {
-                            background-image: url('../assets/icons/nav/masterfile-selected.png');
-                        }
-                        &.funding {
-                            background-image: url('../assets/icons/nav/funding-selected.png');
-                        }
-                        &.reports {
-                            background-image: url('../assets/icons/nav/reports-selected.png');
-                        }
-                    }
+                    padding-right: 1rem;
                 }
             }
         }
@@ -145,10 +82,10 @@ app-sidebar {
             .sidebar-nav-children-item {
                 opacity: 1;
                 height: 100%;   
-            .sidebar-nav-link:before {
-                content: "-";
-                margin-right: 5px;
-            }
+                .sidebar-nav-link:before {
+                    content: "-";
+                    margin-right: 5px;
+                }
             }
         }
     }

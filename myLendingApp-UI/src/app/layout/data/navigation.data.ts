@@ -3,15 +3,15 @@ import { INavItem } from './../models/navigation.model';
 export const sideNavItems: INavItem[] = [
     {
         id: 'navDashboard',
-        icon: 'dashboard',
+        iconclass: 'home',
         text: 'Dashboard',
         link: '/dashboard',
         isCollapsed: true
     },
     {
         id: 'navAdmin',
-        icon: 'admin',
         text: 'Admin',
+        iconclass: 'cog',
         submenu: [
             {
                 id: 'navAdminUsers',
@@ -28,8 +28,8 @@ export const sideNavItems: INavItem[] = [
     },
     {
       id: 'navWorkspace',
-      icon: 'workspace',
       text: 'Workspace',
+      iconclass: 'laptop',
       submenu: [
           {
               id: 'navCollections',
@@ -46,19 +46,19 @@ export const sideNavItems: INavItem[] = [
     },
     {
       id: 'navMasterfile',
-      icon: 'masterfile',
       text: 'Masterfile',
+      iconclass:'address-book',
       isCollapsed: true
     },
     {
       id: 'navFunding',
-      icon: 'funding',
+      iconclass: 'coins',
       text: 'Funding',
       isCollapsed: true
     },
     {
       id: 'navReports',
-      icon: 'reports',
+      iconclass: 'file-invoice',
       text: 'Reports',
       isCollapsed: true
     }     

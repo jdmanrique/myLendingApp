@@ -22,16 +22,6 @@ app-titlebar {
         width: 2.5rem;
         @extend %titlebar-container;
 
-        .titlebar-menu-icon {
-            @extend %icon-image;
-            background-image: url('../assets/icons/nav/menu-open.png');
-        }
-
-        .titlebar-menu-close-icon {
-            @extend %icon-image;
-            background-image: url('../assets/icons/nav/menu-close.png');
-        }
-        
         &.toggled {
           margin-left: 10rem;
           background-color: #022140;

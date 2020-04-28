@@ -1,6 +1,6 @@
 export interface INavItem {
     id: string;
-    icon?: string;
+    iconclass?: string;
     text: string;
     link?: string;
     submenu?: INavItem[];
