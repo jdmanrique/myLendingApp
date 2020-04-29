@@ -68,7 +68,9 @@ app-sidebar {
                     .sidebar-nav-link {
                       flex-grow: 1;
                     }
-
+                    &.selected {
+                      background-color: $custom-color-royalbluedark;
+                    }
                 }
             }
         }
@@ -87,20 +89,26 @@ app-sidebar {
                 height: 0;
             }
             &.show {
-                padding-left: 20px;
-                padding-bottom: 5px;
+                padding-bottom: .5rem;
                 background-color: $custom-color-oxfordblue;
                 opacity: 1;
                 height: auto;
             }
             .sidebar-nav-children-item {
+                padding-left: 3rem;
+                padding-bottom: .2rem;
                 opacity: 1;
                 height: 100%;   
                 .sidebar-nav-link:before {
                     content: "-";
-                    margin-right: 5px;
+                    margin-right: .5rem;
+                }
+
+                &.selected {
+                  background-color: $custom-color-royalbluedark;
                 }
             }
+            
         }
     }
 

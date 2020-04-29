@@ -23,6 +23,21 @@ export const sideNavItems: INavItem[] = [
                 text: 'Banks',
                 link: '/admin/banks'
             },
+            {
+              id: 'navChargeTypes',
+              text: 'Charge Types',
+              link: '/admin/chargetypes'
+            },
+            {
+              id: 'navLoanTypes',
+              text: 'Loan Types',
+              link: '/admin/loantypes'
+            },
+            {
+              id: 'navAgents',
+              text: 'Agents',
+              link: '/admin/agents'
+            }
         ],
         isCollapsed: true 
     },

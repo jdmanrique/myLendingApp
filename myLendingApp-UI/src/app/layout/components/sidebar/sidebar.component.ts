@@ -3,6 +3,7 @@ import { LayoutService } from './../../service/layout.service';
 import { INavItems, INavItem } from './../../models/navigation.model';
 import { Component, OnInit, ChangeDetectionStrategy, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
@@ -19,7 +20,7 @@ export class SidebarComponent implements OnInit {
   sideBarToggled: boolean;
   subscriptions: Subscription = new Subscription();
 
-  constructor(private layoutService: LayoutService, private renderer: Renderer2) { 
+  constructor(private layoutService: LayoutService, private renderer: Renderer2, private route: Router) { 
     this.navItems = layoutService.navigationItems;
   }
 
@@ -29,6 +30,10 @@ export class SidebarComponent implements OnInit {
       this.layoutService.sideBarToggled.subscribe((value) => {
         this.sideBarToggled = value;
       })
+    );
+
+    this.subscriptions.add(
+      this.route.events.subscribe(x => console.log(x))
     );
   }
 
