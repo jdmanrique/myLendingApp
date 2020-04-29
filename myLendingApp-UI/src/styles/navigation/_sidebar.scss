@@ -55,6 +55,20 @@ app-sidebar {
     
                 .sidebar-nav-item-container {
                     padding-right: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 2.5rem;
+                    
+                    .icon {
+                      flex-basis: 2rem;
+                      margin-left: .5rem;
+                    }
+
+                    .sidebar-nav-link {
+                      flex-grow: 1;
+                    }
+
                 }
             }
         }
@@ -62,7 +76,7 @@ app-sidebar {
     
         %collapse-transition {
             display: block !important;
-            transition: all .25s ease-in-out;
+            transition: all .15s ease-in-out;
         }
         .sidebar-nav-children {
             &.collapse, &.collapse.in {
@@ -75,9 +89,9 @@ app-sidebar {
             &.show {
                 padding-left: 20px;
                 padding-bottom: 5px;
-                background-color: $custom-color-royalbluedark;
+                background-color: $custom-color-oxfordblue;
                 opacity: 1;
-                height: 100%;
+                height: auto;
             }
             .sidebar-nav-children-item {
                 opacity: 1;

@@ -7,7 +7,9 @@
         <nav class="sidebar-nav accordion">
             <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}" [ngClass]="!item.isCollapsed && item.submenu ? 'selected': ''">
                 <div  class="sidebar-nav-item-container">
-                    <fa-icon class="sidebar-nav-icon" [icon]="item.iconclass" *ngIf="item.iconclass" size="lg"></fa-icon>
+                    <span class="icon">
+                      <fa-icon class="sidebar-nav-icon" [icon]="item.iconclass" *ngIf="item.iconclass" size="lg"></fa-icon>
+                    </span>
                     <a class="sidebar-nav-link" [text]="item.text" (click)="item.submenu ? item.isCollapsed = !item.isCollapsed : ''" [routerLink]="item.link"  data-toggle="collapse" [attr.data-target]="'#child_' + item.id"></a>
                     <fa-icon class="sidebar-nav-icon float-right" *ngIf="item.submenu" [icon]="'angle-left'" (click)="item.isCollapsed = !item.isCollapsed;" size="lg" [rotate]="item.isCollapsed ? 0 : 270"></fa-icon>
                 </div>
