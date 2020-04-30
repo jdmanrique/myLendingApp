@@ -1,5 +1,6 @@
 @import "bootstrap/scss/_functions";
 @import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";
 
 %icon-image {
     width: 100%;
@@ -29,3 +30,4 @@ $custom-color-prussianblue: #002D5F;
 $custom-color-sapphireblue: #006C9A;
 $custom-color-lightcyan: #B5CACA;
 $custom-color-shadowblue: #8499b9;
+$primary: $custom-color-oxfordblue;

@@ -59,7 +59,8 @@ app-sidebar {
                     flex-direction: row;
                     align-items: center;
                     height: 2.5rem;
-                    
+                    position: relative;
+                    z-index: 1000;
                     .icon {
                       flex-basis: 2rem;
                       margin-left: .5rem;
@@ -90,15 +91,17 @@ app-sidebar {
             }
             &.show {
                 padding-bottom: .5rem;
-                background-color: $custom-color-oxfordblue;
+                background-color: $custom-color-royalbluedark;
                 opacity: 1;
                 height: auto;
+                position: relative;
+                z-index: 1000;
             }
             .sidebar-nav-children-item {
                 padding-left: 3rem;
                 padding-bottom: .2rem;
                 opacity: 1;
-                height: 100%;   
+                height: auto;   
                 .sidebar-nav-link:before {
                     content: "-";
                     margin-right: .5rem;

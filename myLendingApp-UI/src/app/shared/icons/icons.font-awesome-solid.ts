@@ -10,7 +10,8 @@ import {
     faFileInvoice,
     faAngleLeft,
     faTimes,
-    faBars
+    faBars,
+    faSearch
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -23,5 +24,6 @@ export const fontAwesomeSolidIcons = {
     faFileInvoice,
     faAngleLeft,
     faTimes,
-    faBars
+    faBars,
+    faSearch
 };
