@@ -2,28 +2,10 @@ app-sidebar {
     background-color: $custom-color-prussianblue;
 }
 .sidebar-nav-main {
-
-    .sidebar-menu-container {
-        justify-content: center;
-        width: 2.5rem;
-        height: $titlebar-base-height;
-        align-items: center;
-        display: flex;
-        margin-right: .2rem;
-        transition: all .15s ease-in-out;
-        
-        &.toggled {
-          margin-left: 10rem;
-          transform: translateX(0);
-        }
-
-        .sidebar-menu-icon {
-          color: $custom-color-shadowblue;
-          cursor: pointer;
-        }
-    }
     
     .sidebar-nav-container {
+        padding-top: 1rem;
+        min-width: $sidebar-base-width;
         margin-left: -$sidebar-base-width;
         transform: translateX(-$sidebar-base-width);
         transition: all .15s ease-in-out;
@@ -38,7 +20,6 @@ app-sidebar {
         }
 
         .sidebar-nav {
-            height: calc(100vh - 2.5rem);
             display: flex;
             flex-direction: column;
     

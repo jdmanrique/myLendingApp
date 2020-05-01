@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LayoutService {
 
-  sideBarToggled: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  sideBarToggled: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   get navigationItems() {
     return sideNavItems;

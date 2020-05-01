@@ -12,15 +12,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  @ViewChild('sideBarMenuContainer') sideBarMenuContainer: ElementRef;
-  @ViewChild('sideBarNavContainer') sideBarNavContainer: ElementRef;
 
   navItems: INavItem[];
   isCollapsed = true;
-  sideBarToggled: boolean;
   subscriptions: Subscription = new Subscription();
+  sideBarToggled: boolean;
 
-  constructor(private layoutService: LayoutService, private renderer: Renderer2, private route: Router) { 
+  constructor(private layoutService: LayoutService, private route: Router) { 
     this.navItems = layoutService.navigationItems;
   }
 
@@ -31,33 +29,11 @@ export class SidebarComponent implements OnInit {
         this.sideBarToggled = value;
       })
     );
-
-    this.subscriptions.add(
-      this.route.events.subscribe(x => console.log(x))
-    );
   }
 
   redirectTo(item: INavItem) {
     this.layoutService.redirectTo(item);
   }
 
-  toggleSideBar(value: boolean) {
-    this.layoutService.toggleSideBar(value);
-    this.applyClass(value);
-  }
-
   // Private methods
-  private subscribe() {
-  }
-
-  private applyClass(value: boolean) {
-    if (value) {
-      this.renderer.addClass(this.sideBarMenuContainer.nativeElement, 'toggled');
-      this.renderer.addClass(this.sideBarNavContainer.nativeElement, 'toggled');
-    }
-    else {
-      this.renderer.removeClass(this.sideBarMenuContainer.nativeElement, 'toggled');
-      this.renderer.removeClass(this.sideBarNavContainer.nativeElement, 'toggled');
-    }
-  }
 }

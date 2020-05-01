@@ -17,23 +17,35 @@ app-titlebar {
     justify-content: space-between;
     flex-basis: 50px;
 
-      .titlebar-menu-container {
-        justify-content: center;
-        width: 2.5rem;
-        @extend %titlebar-container;
+    .titlebar-menutoggle-container {
+      justify-content: center;
+      width: 2.5rem;
+      height: $titlebar-base-height;
+      align-items: center;
+      display: flex;
 
-        &.toggled {
-          margin-left: 10rem;
-          background-color: #022140;
-          padding-right: .5rem;
-        }
+      .titlebar-menutoggle-icon {
+        color: $custom-color-prussianblue;
+        cursor: pointer;
       }
+    }
+
+    .titlebar-menu-container {
+      justify-content: center;
+      width: 2.5rem;
+      @extend %titlebar-container;
+
+      &.toggled {
+        margin-left: 10rem;
+        background-color: #022140;
+        padding-right: .5rem;
+      }
+    }
 
     .titlebar-logo-container {
         @extend %titlebar-container;
         justify-content: left;
         flex-grow: 2;
-        padding-left: .5rem;
         .titlebar-logo-icon {
           @extend %icon-image;
           width:150px;

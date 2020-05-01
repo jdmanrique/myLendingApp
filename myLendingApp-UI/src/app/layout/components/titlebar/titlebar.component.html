@@ -1,8 +1,8 @@
 <div class="titlebar-container" name="titleBarContainer" #titleBarContainer>
-    <!-- <div class="titlebar-menu-container" name="titleBarMenuContainer" #titleBarMenuContainer> 
-        <span class="titlebar-menu-close-icon" (click)="toggleSideBar(false)" *ngIf="sideBarToggled"></span>
-        <span class="titlebar-menu-icon" (click)="toggleSideBar(true)" *ngIf="!sideBarToggled"></span>
-    </div> -->
+    <div class="titlebar-menutoggle-container">
+      <fa-icon class="titlebar-menutoggle-icon" [icon]="'times'" (click)="toggleSideBar(false)" *ngIf="sideBarToggled" size="lg"></fa-icon>
+      <fa-icon class="titlebar-menutoggle-icon" [icon]="'bars'" (click)="toggleSideBar(true)" *ngIf="!sideBarToggled" size="lg"></fa-icon>
+    </div>
     <div class="titlebar-logo-container"> 
       <a [routerLink]="'/dashboard'">
         <img class="titlebar-logo-icon" [src]="'./assets/icons/nav/logo.png'"/>

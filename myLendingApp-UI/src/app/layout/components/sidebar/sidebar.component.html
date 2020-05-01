@@ -1,9 +1,5 @@
 <div class="sidebar-nav-main">
-    <div class="sidebar-menu-container" #sideBarMenuContainer name="sideBarMenuContainer">
-        <fa-icon class="sidebar-menu-icon" [icon]="'times'" (click)="toggleSideBar(false)" *ngIf="sideBarToggled" size="lg"></fa-icon>
-        <fa-icon class="sidebar-menu-icon" [icon]="'bars'" (click)="toggleSideBar(true)" *ngIf="!sideBarToggled" size="lg"></fa-icon>
-    </div>
-    <div class="sidebar-nav-container" #sideBarNavContainer name="sidebarNavContainer">
+    <div class="sidebar-nav-container" #sideBarNavContainer name="sideBarNavContainer" [ngClass]="sideBarToggled ? 'toggled' : ''">
         <nav class="sidebar-nav accordion">
             <div *ngFor="let item of navItems" class="sidebar-nav-item" id="{item.id}}" [ngClass]="!item.isCollapsed && item.submenu ? 'selected': ''">
                 <div  class="sidebar-nav-item-container">
