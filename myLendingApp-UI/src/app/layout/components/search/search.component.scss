@@ -8,9 +8,17 @@
   position: relative;
   z-index: 1000;
 
+  fa-icon {
+    color: $custom-color-oxfordblue;
+    &:active {
+      color: $custom-color-royalbluedark;
+
+    }
+  }
+
   .searchbar-icon {
     fa-icon {
-      color: $custom-color-royalbluedark;
+      color: $custom-color-oxfordblue;
     }
   }
 }
@@ -24,7 +32,6 @@
     position: absolute;
     z-index: 1001;
     left: 17rem;
-    cursor: pointer;
   }
 }
 

@@ -11,7 +11,9 @@ import {
     faAngleLeft,
     faTimes,
     faBars,
-    faSearch
+    faSearch,
+    faBell,
+    faCaretDown
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeSolidIcons = {
@@ -25,5 +27,7 @@ export const fontAwesomeSolidIcons = {
     faAngleLeft,
     faTimes,
     faBars,
-    faSearch
+    faSearch,
+    faBell,
+    faCaretDown
 };

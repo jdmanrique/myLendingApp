@@ -17,6 +17,10 @@ app-titlebar {
     justify-content: space-between;
     flex-basis: 50px;
 
+    fa-icon:active {
+      color: $custom-color-royalbluedark;
+    }
+
     .titlebar-menutoggle-container {
       justify-content: center;
       width: 2.5rem;
@@ -26,7 +30,6 @@ app-titlebar {
 
       .titlebar-menutoggle-icon {
         color: $custom-color-prussianblue;
-        cursor: pointer;
       }
     }
 
@@ -59,20 +62,14 @@ app-titlebar {
         @extend %titlebar-container;
         padding-left: 10px;
         padding-right: 10px;
+        color: $custom-color-oxfordblue;
 
         .user-notif {
-          .user-notif-icon {
-            @extend %icon-image;
-            width: 25px;
-            height: 25px;
-            background-image: url("../assets/icons/nav/notifications.png");
-            &.active {
-              background-image: url("../assets/icons/nav/notifications-active.png");
-            }
-          }
+          margin: 0 .5rem 0 0;
         }
+        
         .user-name {
-          margin: 0px 10px 0px 10px;
+          margin: 0 .5rem 0 0;
         }
 
         .user-logo {
@@ -80,16 +77,13 @@ app-titlebar {
           width: 30px;
           height: 30px;
           background-image: url("../assets/icons/nav/face.png");
+          margin-right: .2rem;
         } 
-        .caret {
-          @extend %icon-image;
-          background-image: url("../assets/icons/nav/user-caret.png");
-          width: 15px;
-          height: 15px;
-          margin-top: 5px;
-        }
     }
+}
 
-    
-    
+@include media-breakpoint-down(sm) {
+  .user-name {
+    display: none;
+  }
 }
