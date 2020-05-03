@@ -1,0 +1,89 @@
+app-titlebar {
+  background-color: $custom-color-sapphireblue;  
+}
+
+%titlebar-container {
+  z-index: 2;
+  position: relative;
+  height: $titlebar-base-height;
+  align-items: center;
+  display: flex;
+  
+}
+
+.titlebar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 50px;
+
+    fa-icon:active {
+      color: $custom-color-royalbluedark;
+    }
+
+    .titlebar-menutoggle-container {
+      justify-content: center;
+      width: 2.5rem;
+      height: $titlebar-base-height;
+      align-items: center;
+      display: flex;
+
+      .titlebar-menutoggle-icon {
+        color: $custom-color-prussianblue;
+      }
+    }
+
+    .titlebar-menu-container {
+      justify-content: center;
+      width: 2.5rem;
+      @extend %titlebar-container;
+
+      &.toggled {
+        margin-left: 10rem;
+        background-color: #022140;
+        padding-right: .5rem;
+      }
+    }
+
+    .titlebar-logo-container {
+        @extend %titlebar-container;
+        justify-content: left;
+        flex-grow: 2;
+        .titlebar-logo-icon {
+          @extend %icon-image;
+          width:150px;
+          height:30px;
+        }
+    }
+
+    .titlebar-action-container {
+        float:right;
+        flex-direction: row;
+        @extend %titlebar-container;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $custom-color-oxfordblue;
+
+        .user-notif {
+          margin: 0 .5rem 0 0;
+        }
+        
+        .user-name {
+          margin: 0 .5rem 0 0;
+        }
+
+        .user-logo {
+          @extend %icon-image;
+          width: 30px;
+          height: 30px;
+          background-image: url("../assets/icons/nav/face.png");
+          margin-right: .2rem;
+        } 
+    }
+}
+
+@include media-breakpoint-down(sm) {
+  .user-name {
+    display: none;
+  }
+}

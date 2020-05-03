@@ -1,0 +1,48 @@
+@import 'styles/_variables';
+
+.searchbar-container {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+
+  fa-icon {
+    color: $custom-color-oxfordblue;
+    &:active {
+      color: $custom-color-royalbluedark;
+
+    }
+  }
+
+  .searchbar-icon {
+    fa-icon {
+      color: $custom-color-oxfordblue;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .searchbar-input {
+    padding-right: 2rem;
+    min-width: 18rem;
+  }
+  .searchbar-icon {
+    position: absolute;
+    z-index: 1001;
+    left: 17rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+
+  .searchbar-input {
+    display: none;
+  }
+
+  .searchbar-icon {
+    position: relative;
+    left: 0;
+  }
+}

@@ -1,21 +1,23 @@
-import { NavigationModule } from '@app/features/navigation/_modules/navigation.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from './../../../shared/shared.module';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from '../components/dashboard.component';
+import { DashboardService } from '../service/dashboard.service';
 
 @NgModule({
   declarations: [
     DashboardComponent
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
-    DashboardRoutingModule,
-    NavigationModule
+    SharedModule
   ],
   exports:  [DashboardComponent]
 })
-export class DashboardModule { }
+export class DashboardModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: DashboardModule,
+      providers: [DashboardService]
+    };
+  }
+}

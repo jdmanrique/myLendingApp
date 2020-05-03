@@ -1,0 +1,20 @@
+<div class="titlebar-container" name="titleBarContainer" #titleBarContainer>
+    <div class="titlebar-menutoggle-container">
+      <fa-icon class="titlebar-menutoggle-icon" [icon]="'times'" (click)="toggleSideBar(false)" *ngIf="sideBarToggled" size="lg"></fa-icon>
+      <fa-icon class="titlebar-menutoggle-icon" [icon]="'bars'" (click)="toggleSideBar(true)" *ngIf="!sideBarToggled" size="lg"></fa-icon>
+    </div>
+    <div class="titlebar-logo-container"> 
+      <a [routerLink]="'/dashboard'">
+        <img class="titlebar-logo-icon" [src]="'./assets/icons/nav/logo.png'"/>
+      </a>
+    </div>
+    <div class="titlebar-action-container">
+      <app-search></app-search>
+      <div class="user-notif">
+        <fa-icon [icon]="'bell'" size="lg"></fa-icon>
+      </div>
+      <div class="user-name"><b>JD Manrique</b></div>
+      <span class="user-logo"></span>
+      <fa-icon [icon]="'caret-down'"></fa-icon>
+    </div>
+</div>
